@@ -59,25 +59,25 @@ def create_user_name(first_name, last_name, cohort, final_campus):
     uppercase_campus = user_campus(final_campus)
 
     username = last_3 + first_3 + uppercase_campus + str(cohort)
-    return username
+    print(username)
+    return username 
 
 def user_campus(campus):
     """
     Return valid campus abbreviations
     """
     uppercase_campus = ''
-    if campus == "Durban":
+    if campus == "durban":
         uppercase_campus = "DBN"
-    elif campus == "Johannesburg":
+    elif campus == "johannesburg":
         uppercase_campus = "JHB"
-    elif campus == "Cape Town":
+    elif campus == "cape town":
         uppercase_campus = "CPT"
-    elif campus == "Phokeng":
+    elif campus == "phokeng":
         uppercase_campus = "NW"
     
     return uppercase_campus
 
 if __name__ == '__main__':
-    first_name, last_name, cohort, final_campus = user_details()
-    create_user_name(first_name, last_name, cohort, final_campus)
+    username = user_details()
     
